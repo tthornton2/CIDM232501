@@ -1,3 +1,3 @@
 8/27/2023 
 -Create the repo, and add a new CHANGELOG file.
--Uploaded Completed HW1 assignment
+-Uploaded HW1_Completed.cs 
