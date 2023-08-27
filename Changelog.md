@@ -1,1 +1,3 @@
-8/27/2023 Create the repo, and add a new CHANGELOG file.
+8/27/2023 
+-Create the repo, and add a new CHANGELOG file.
+-Uploaded Completed HW1 assignment
