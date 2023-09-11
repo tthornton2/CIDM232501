@@ -1,33 +1,38 @@
-﻿namespace HW2;
+﻿namespace HW2_2;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
-        Console.WriteLine("Please enter your letter grade.");
-        string letter = Console.ReadLine();
- 
+        Console.WriteLine("Please enter your first number:");
+        string input1 = Console.ReadLine();
+        
+        Console.WriteLine("Please enter your second Number:");
+        string input2 = Console.ReadLine();
+        
+        Console.WriteLine("Please enter your third Number:");
+        string input3 = Console.ReadLine();
 
-        if (letter == "A"){
-            Console.WriteLine("4 GPA Points");
-        }
-        else if (letter == "B"){ 
-            Console.WriteLine("3 GPA Points");
-        }
-        else if (letter == "C"){ 
-            Console.WriteLine("2 GPA Points");
-        }
-        else if (letter == "D"){ 
-            Console.WriteLine("1 GPA Points");
-        }
-        else if (letter == "F"){
-            Console.WriteLine("0 GPA Points");
+        if (int.TryParse(input1, out int num1) && int.TryParse(input2, out int num2) && int.TryParse(input3, out int num3))
+        { //asked AI for some help (below) clearing up my num/input convertion chatgpt, 9/10/23
+            if (num1 > num2 && num1 > num3)
+            {
+                Console.WriteLine($"{num1} is the largest number");
+            }
+            else if (num2 > num3)
+            {
+                Console.WriteLine($"{num2} is the largest number");
+            }
+            else
+            {
+                Console.WriteLine($"{num3} is the largest number");
+            }
         }
         else
         {
-            Console.WriteLine("Try again!");
+            Console.WriteLine("Invalid input. Please enter valid numbers.");
         }
-        
-
     }
 }
+
+
