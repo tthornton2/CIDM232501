@@ -2,4 +2,6 @@
 -Create the repo, and add a new CHANGELOG file.
 -Uploaded HW1_Completed.cs 
 9/6/2023
--Uploaded HW2_1
+-Uploaded HW2
+9/10/2023
+-Uploaded HW2_2
