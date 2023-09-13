@@ -5,3 +5,5 @@
 -Uploaded HW2
 9/10/2023
 -Uploaded HW2_2
+9/12/23
+-Uploaded HW3_1-3
