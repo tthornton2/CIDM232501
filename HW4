@@ -1,0 +1,77 @@
+//LARGEST NUMBER RETURN 
+namespace HW4;
+
+class Program
+{
+    static void Main(string[] args)
+        {
+            
+
+        Console.WriteLine("Please enter a number:");
+            int num_1 = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Please enter a 2nd number:");
+            int num_2 = int.Parse(Console.ReadLine()); 
+
+        Console.WriteLine("Please enter a 3rd number:");
+            int num_3 = int.Parse(Console.ReadLine()); 
+
+        int largest;
+//asked chatgtp if I had duplicate variable names keeping my code from running. 9/19/2023
+        
+        if(num_1 > num_2 && num_1 > num_3)
+        {
+            largest= num_1;
+        }
+        else if (num_2> num_1 && num_2 > num_3)
+        {
+            largest = num_2;
+        }
+
+        else 
+        {   
+            largest = num_3;
+        }
+
+        Console.WriteLine($"The largest number is: {largest}");
+
+    
+        }
+}
+
+//SECOND PART
+namespace HW4_2;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+      int N = 5;
+      Console.WriteLine("Please input left or right");
+      string shape = Console.ReadLine();
+
+
+    if (shape=="left")
+
+        for(int row = 0; row<=N; row++){
+    for(int col = 0; col<5; col++)
+    {
+        if(row>=col)
+            Console.Write('*');
+    }
+    Console.WriteLine("");
+}
+    if (shape=="right")
+for(int row = 1; row<=N; row++)
+    {
+    for(int col = 1; col<=N; col++)
+    {
+        if(col<= N-row)
+            Console.Write(' ');
+        else
+            Console.Write("*");
+    }
+    Console.WriteLine("");
+    }
+}
+    }
