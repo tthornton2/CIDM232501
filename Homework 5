@@ -1,0 +1,52 @@
+namespace HW5;
+class Program
+{  //----HW Q1 Pulling 2 ints
+    static void Main(string[] args)
+{
+    message();
+    int num1 = Convert.ToInt32(Console.ReadLine());
+    message();
+    int num2 = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("The largest number is:");
+    Console.WriteLine(Math.Max(num1, num2));
+}
+static void message(){
+     Console.WriteLine("Please enter a number:");
+}
+}
+
+
+//----HW Q2 Pulling 4 ints
+{
+    message();
+    int num1 = Convert.ToInt32(Console.ReadLine());
+    message();
+    int num2 = Convert.ToInt32(Console.ReadLine());
+     message();
+    int num3 = Convert.ToInt32(Console.ReadLine());
+     message();
+    int num4 = Convert.ToInt32(Console.ReadLine());
+
+        int max1 = (Math.Max(num1, num2));
+        int max2 = (Math.Max(num3, num4));
+
+        if
+    
+            (max1 < max2)
+            
+            Console.WriteLine($"The largest number is: {max2}");
+        
+        else
+        {
+            Console.WriteLine($"The largest number is: {max1}");
+
+    }
+      
+static void message(){
+     Console.WriteLine("Please enter a whole number:");
+}
+}
+}
+
+//-----HW Q3
+
