@@ -1,0 +1,89 @@
+using System;
+
+namespace HW6
+{
+    class Professor
+    {
+        public string profName;
+        public string classTeach;
+        private double Salary;
+
+         public double salary
+        {
+            get { return salary; }
+            set { salary = value; }
+        }
+
+
+        public void PrintInfo()
+        {
+            Console.WriteLine($"Professor {profName} teaches {classTeach} and their salary is ${Salary} a year.");
+        }
+    }
+
+    class Student
+    {
+        public string studentName;
+        public string classEnroll;
+        private double studentGrade;
+            public double StudentGrade
+        {
+            get { return studentGrade; }
+            set { studentGrade = value; }
+        }
+        public void PrintInfo()
+        {
+            Console.WriteLine($"Student {studentName} is enrolled in {classEnroll} and has a grade of {studentGrade}.");
+        }
+    }
+
+    static class Program
+    {
+        static void Main(string[] args)
+        {
+            Professor professor1 = new Professor
+                    {
+                        profName = "Alice",
+                        classTeach = "Java",
+                        salary = 9000
+                    };
+            Professor professor2 = new Professor
+                    {
+                        profName = "Bob",
+                        classTeach = "Math",
+                        salary = 8000
+                    };
+            Student student1 = new Student
+                    {
+                        studentName = "Lisa",
+                        classEnroll = "Java",
+                        StudentGrade = 90
+                    };
+            Student student2 = new Student
+                    {
+                        studentName = "Tom",
+                        classEnroll = "Math",
+                        StudentGrade = 80
+                    };
+            
+                                professor1.PrintInfo();
+                                professor2.PrintInfo();
+                                student1.PrintInfo();
+                                student2.PrintInfo();
+
+                double salaryDif = professor1.salary - professor2.salary;
+                Console.WriteLine($"{professor1.profName} makes ${salaryDif} more per year than {professor2.profName}.");
+                
+                double gradeTotal = student1.StudentGrade + student2.StudentGrade;
+                Console.WriteLine($"{student1.studentName} and {student2.studentName} have a combined grade of {gradeTotal}.");
+
+        }
+    }
+}
+/* I'm getting this after it returns the output. I tried to fix it but it kept redlining stuff that was working.
+Stack overflow.
+Repeat 24099 times:
+--------------------------------
+   at HW6.Professor.set_salary(Double)
+--------------------------------
+   at HW6.Program.Main(System.String[])*/
