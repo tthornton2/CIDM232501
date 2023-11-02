@@ -1,0 +1,72 @@
+  using System;
+
+class Program
+{
+    static void Main()
+    { //had to ask chatgpt for help pretty often with placement and syntax on this assignment
+        //gradebook
+        (string, double)[] gradebook = {
+            ("Alice", 4.0),
+            ("Bob", 3.6),
+            ("Cathy", 2.5),
+            ("David", 1.8)
+        };
+
+        Console.WriteLine("Gradebook:");
+        foreach (var pair in gradebook)
+        {
+            Console.WriteLine($"{pair.Item1}: {pair.Item2}");
+        }
+
+                        //avGPA
+                        double totalGPA = 0;
+                        foreach (var pair in gradebook)
+                        {
+                            totalGPA += pair.Item2;
+                        }
+
+                        double avGPA = totalGPA / gradebook.Length;
+                        Console.WriteLine("Average GPA: " + avGPA);
+
+                        
+                        Console.WriteLine("Students with a higher than average GPA:");
+                        foreach (var pair in gradebook)
+                        {
+                            if (pair.Item2 > avGPA)
+                            {
+                                Console.WriteLine($"{pair.Item1}: {pair.Item2}");
+                            }
+        }
+
+        //kept getting errors when I tried to have this print out first. Asked chatgpt and it said to put it here.
+        Student[] students = {
+            new Student(111, "Alice"),
+            new Student(222, "Bob"),
+            new Student(333, "Cathy"),
+            new Student(444, "David")
+        };
+
+        Console.WriteLine("\nStudents:");
+        foreach (Student student in students)
+        {
+            student.PrintInfo();
+        }
+    }
+}
+
+public class Student
+{
+    private int studentID;
+    private string studentName;
+
+    public Student(int id, string name)
+    {
+        this.studentID = id;
+        this.studentName = name;
+    }
+
+    public void PrintInfo()
+    {
+        Console.WriteLine($"Student ID: {studentID}, Name: {studentName}");
+    }
+}
